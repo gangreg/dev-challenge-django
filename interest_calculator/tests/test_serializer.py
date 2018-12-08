@@ -24,4 +24,3 @@ class CalculateSerializerTestCase(SimpleTestCase):
         }
         serializer = CalculateSerializer(data=data)
         self.assertFalse(serializer.is_valid())
-

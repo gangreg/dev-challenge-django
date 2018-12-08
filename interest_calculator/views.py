@@ -1,7 +1,6 @@
 import json
 from rest_framework.views import APIView
-from django.http import JsonResponse
-from django.views.decorators.http import require_POST
+from rest_framework.response import Response
 from django.views.decorators.csrf import csrf_exempt
 
 from .serializer import CalculateSerializer
@@ -10,7 +9,8 @@ class CalculateView(APIView):
 
     @csrf_exempt
     def post(self, request):
-        serializer = CalculateSerializer(data=json.loads(request.body))
+        import pdb; pdb.set_trace()
+        serializer = CalculateSerializer(data=request.data)
         serializer.is_valid(raise_exception=True)
 
-        return JsonResponse({'result': 1000})
+        return Response({'result': 1000})

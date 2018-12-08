@@ -1,6 +1,6 @@
 import React, { Component } from "react"
 import { calculate } from "./API"
-import InputGraphSection from './Components/InputGraphSection'
+import InputGraphSection from './Components/InputGraphSection.container'
 import "./App.css"
 
 class App extends Component {

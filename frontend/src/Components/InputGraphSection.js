@@ -12,10 +12,10 @@ export default class InputGraphSection extends Component {
       <div>
         <div className="financial-inputs">
           <p className="input-label">How much have you saved?</p>
-          <CurrencyInput defaultValue={0} />
+          <CurrencyInput value={this.props.savingsAmount} />
 
           <p className="input-label">How much will you save each month?</p>
-          <CurrencyInput defaultValue={0} />
+          <CurrencyInput value={0} />
 
           <p className="input-label">
             How much interest will you earn per year?

@@ -12,7 +12,10 @@ export default class InputGraphSection extends Component {
       <div>
         <div className="financial-inputs">
           <p className="input-label">How much have you saved?</p>
-          <CurrencyInput value={this.props.savingsAmount} />
+          <CurrencyInput 
+            value={this.props.savingsAmount}
+            updateField={(value) => this.props.updateField('savingsAmount', value)}
+          />
 
           <p className="input-label">How much will you save each month?</p>
           <CurrencyInput value={0} />

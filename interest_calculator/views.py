@@ -9,7 +9,6 @@ class CalculateView(APIView):
 
     @csrf_exempt
     def post(self, request):
-        import pdb; pdb.set_trace()
         serializer = CalculateSerializer(data=request.data)
         serializer.is_valid(raise_exception=True)
 

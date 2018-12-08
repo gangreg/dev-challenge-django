@@ -5,10 +5,13 @@
 	"proxy": "http://localhost:8000",
 	"dependencies": {
 		"axios": "^0.17.1",
-		"react": "^16.2.0",
-		"react-dom": "^16.2.0",
-		"victory": "^0.21.0",
-		"react-scripts": "1.1.0"
+		"react": "^16.3.0",
+		"react-dom": "^16.3.0",
+		"react-redux": "^6.0.0",
+		"react-scripts": "1.1.0",
+		"redux": "^4.0.1",
+		"redux-devtools": "^3.4.2",
+		"victory": "^0.21.0"
 	},
 	"scripts": {
 		"start": "react-scripts start",

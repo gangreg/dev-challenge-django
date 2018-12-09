@@ -18,7 +18,10 @@ export default class InputGraphSection extends Component {
           />
 
           <p className="input-label">How much will you save each month?</p>
-          <CurrencyInput value={0} />
+          <CurrencyInput 
+            value={this.props.monthlySavings} 
+            updateField={(value) => this.props.updateField('monthlySavings', value)}
+          />
 
           <p className="input-label">
             How much interest will you earn per year?

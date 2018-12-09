@@ -3,7 +3,8 @@ import * as actionTypes from './actionTypes';
 export const initialState = {
   savingsAmount: 1000,
   monthlySavings: 100,
-  interestRate: 0.1
+  interestRate: 0.1,
+  monthlyData: []
 }
 
 const interestReducer = (state = initialState, action) => {
@@ -12,6 +13,11 @@ const interestReducer = (state = initialState, action) => {
       return {
         ...state,
         [action.field]: action.value
+      }
+    case actionTypes.CALCULATE.SUCCESS:
+      return {
+        ...state,
+        monthlyData: action.data
       }
     default:
       return state;

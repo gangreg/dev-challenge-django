@@ -5,3 +5,13 @@ export const updateCalculationField = (field, value) => ({
   field,
   value,
 });
+
+export const calculateSuccess = data => ({
+  type: actionTypes.CALCULATE.SUCCESS,
+  data,
+})
+
+export const calculateFailure = error => ({
+  type: actionTypes.CALCULATE.FAILURE,
+  error,
+})

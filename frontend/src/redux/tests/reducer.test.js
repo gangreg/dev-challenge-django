@@ -14,4 +14,16 @@ describe('interests reducer', () => {
       savingsAmount: 100,
     });
   })
+
+  it('should change the save the data from a calculate success', () => {
+    const action = {
+      type: actionTypes.CALCULATE.SUCCESS,
+      data: [123, 321]
+    };
+    const newState = interestReducer(initialState, action);
+    expect(newState).toEqual({
+      ...initialState,
+      monthlyData: [123, 321],
+    });
+  })
 })

@@ -1,1 +1,6 @@
 export const UPDATE_CALCULATION_FIELD = 'interest/UPDATE_CALCULATION_FIELD';
+
+export const CALCULATE = {
+  SUCCESS: 'interest/CALCULATE_SUCCESS',
+  FAILURE: 'interest/CALCULATE_FAILURE',
+}

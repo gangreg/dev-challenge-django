@@ -26,7 +26,10 @@ export default class InputGraphSection extends Component {
           <p className="input-label">
             How much interest will you earn per year?
           </p>
-          <SliderInput defaultValue={4} />
+          <SliderInput 
+            value={this.props.interestRate} 
+            updateSlider={(value) => this.props.updateField('interestRate', value)}
+          />
         </div>
         <div className="financial-display">
           {/*We have included some sample data here, you will need to replace this

@@ -5,6 +5,7 @@ import { updateCalculationField } from '../redux/modules/interest/actions';
 const mapStateToProps = state => ({
   savingsAmount: state.interest.savingsAmount,
   monthlySavings: state.interest.monthlySavings,
+  interestRate: state.interest.interestRate,
 });
 
 const mapDispatchToProps = (dispatch) => ({

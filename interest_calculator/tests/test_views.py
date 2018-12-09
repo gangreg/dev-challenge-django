@@ -17,6 +17,7 @@ class CalculateViewTestCase(SimpleTestCase):
         self.client = Client()
         self.request_body = {
             "savingsAmount": 50.5,
+            "monthlySavings": 34,
             "interestRate": 2
         }
 

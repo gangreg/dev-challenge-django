@@ -9,5 +9,6 @@ class CalculateSerializer(serializers.Serializer):
     Serialize the calculate view
     """
 
-    savingsAmount = serializers.FloatField(allow_null=False)
-    interestRate = serializers.FloatField(allow_null=False)
+    savingsAmount = serializers.FloatField(allow_null=False, min_value=0)
+    monthlySavings = serializers.FloatField(allow_null=False, min_value=0)
+    interestRate = serializers.FloatField(allow_null=False, min_value=0)

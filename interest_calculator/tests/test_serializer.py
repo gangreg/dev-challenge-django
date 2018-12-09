@@ -12,6 +12,7 @@ class CalculateSerializerTestCase(SimpleTestCase):
     def test_with_correct_data(self):
         data = {
             "savingsAmount": 25.4,
+            "monthlySavings": 5,
             "interestRate": 2
         }
         serializer = CalculateSerializer(data=data)
@@ -20,7 +21,17 @@ class CalculateSerializerTestCase(SimpleTestCase):
     def test_with_string(self):
         data = {
             "savingsAmount": 'asd',
+            "monthlySavings": 5,
             "interestRate": 2
+        }
+        serializer = CalculateSerializer(data=data)
+        self.assertFalse(serializer.is_valid())
+
+    def test_with_negative(self):
+        data = {
+            "savingsAmount": 35,
+            "monthlySavings": 5,
+            "interestRate": -2
         }
         serializer = CalculateSerializer(data=data)
         self.assertFalse(serializer.is_valid())

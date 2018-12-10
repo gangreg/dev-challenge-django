@@ -18,6 +18,7 @@ class CalculateViewTestCase(SimpleTestCase):
         self.request_body = {
             "savingsAmount": 1,
             "monthlySavings": 1,
+            "payoutFrequency": 12,
             "interestRate": 0.1
         }
 

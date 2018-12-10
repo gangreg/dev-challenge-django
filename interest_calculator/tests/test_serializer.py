@@ -13,6 +13,7 @@ class CalculateSerializerTestCase(SimpleTestCase):
         data = {
             "savingsAmount": 25.4,
             "monthlySavings": 5,
+            "payoutFrequency": 12,
             "interestRate": 2
         }
         serializer = CalculateSerializer(data=data)
@@ -22,6 +23,7 @@ class CalculateSerializerTestCase(SimpleTestCase):
         data = {
             "savingsAmount": 'asd',
             "monthlySavings": 5,
+            "payoutFrequency": 12,
             "interestRate": 2
         }
         serializer = CalculateSerializer(data=data)
@@ -31,6 +33,7 @@ class CalculateSerializerTestCase(SimpleTestCase):
         data = {
             "savingsAmount": 35,
             "monthlySavings": 5,
+            "payoutFrequency": 12,
             "interestRate": -2
         }
         serializer = CalculateSerializer(data=data)

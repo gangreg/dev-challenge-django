@@ -12,3 +12,4 @@ class CalculateSerializer(serializers.Serializer):
     savingsAmount = serializers.FloatField(allow_null=False, min_value=0)
     monthlySavings = serializers.FloatField(allow_null=False, min_value=0)
     interestRate = serializers.FloatField(allow_null=False, min_value=0)
+    payoutFrequency = serializers.IntegerField(allow_null=False, min_value=0)

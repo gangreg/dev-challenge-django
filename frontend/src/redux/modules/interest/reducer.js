@@ -4,6 +4,7 @@ export const initialState = {
   savingsAmount: 1000,
   monthlySavings: 100,
   interestRate: 0.5,
+  payoutFrequency: 12,
   monthlyData: []
 }
 

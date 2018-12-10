@@ -8,6 +8,7 @@ const mapStateToProps = state => ({
   monthlySavings: state.interest.monthlySavings,
   interestRate: state.interest.interestRate,
   monthlyData: getGraphFormattedData(state),
+  payoutFrequency: state.interest.payoutFrequency,
 });
 
 const mapDispatchToProps = (dispatch) => ({

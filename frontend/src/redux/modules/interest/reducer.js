@@ -3,7 +3,7 @@ import * as actionTypes from './actionTypes';
 export const initialState = {
   savingsAmount: 1000,
   monthlySavings: 100,
-  interestRate: 0.1,
+  interestRate: 0.5,
   monthlyData: []
 }
 

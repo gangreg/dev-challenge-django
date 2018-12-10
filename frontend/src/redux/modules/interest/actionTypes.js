@@ -1,6 +1,7 @@
 export const UPDATE_CALCULATION_FIELD = 'interest/UPDATE_CALCULATION_FIELD';
 
 export const CALCULATE = {
+  REQUEST: 'interest/CALCULATE_REQUEST',
   SUCCESS: 'interest/CALCULATE_SUCCESS',
   FAILURE: 'interest/CALCULATE_FAILURE',
 }

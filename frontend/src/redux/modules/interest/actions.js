@@ -6,6 +6,10 @@ export const updateCalculationField = (field, value) => ({
   value,
 });
 
+export const calculate = () => ({
+  type: actionTypes.CALCULATE.REQUEST,
+})
+
 export const calculateSuccess = data => ({
   type: actionTypes.CALCULATE.SUCCESS,
   data,

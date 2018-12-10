@@ -1,15 +1,18 @@
 import { connect } from 'react-redux';
 import InputGraphSection from './InputGraphSection';
-import { updateCalculationField } from '../redux/modules/interest/actions';
+import { updateCalculationField, calculate } from '../redux/modules/interest/actions';
+import { getGraphFormattedData } from '../redux/modules/interest/selectors';
 
 const mapStateToProps = state => ({
   savingsAmount: state.interest.savingsAmount,
   monthlySavings: state.interest.monthlySavings,
   interestRate: state.interest.interestRate,
+  monthlyData: getGraphFormattedData(state),
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  updateField: (field, value) => dispatch(updateCalculationField(field, value))
+  updateField: (field, value) => dispatch(updateCalculationField(field, value)),
+  intialCalculation: () => dispatch(calculate())
 });
 
 export default connect(
